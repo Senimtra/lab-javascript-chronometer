@@ -10,6 +10,10 @@ body {
   padding: 40px 0;
 }
 
+span {
+  margin: -10px;
+}
+
 #clock {
   border: 2px solid #000;
   border-radius: 20px;
@@ -48,9 +52,14 @@ body {
 
 #milliseconds {
   font-size: 36px;
-  margin-top: -15px;
+  margin-top: -14px;
   position: absolute;
-  right: 20px;
+  right: 16px;
+  width: 51px;
+}
+
+#milliseconds span {
+  margin: -5px;
 }
 
 .leash {
@@ -87,6 +96,7 @@ body {
 .number {
   display: inline-block;
   width: 40px;
+  margin: -10px;
 }
 
 .btn {
