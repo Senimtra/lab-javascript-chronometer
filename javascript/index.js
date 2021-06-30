@@ -45,12 +45,22 @@ function printMilliseconds() {
   // ... your code goes here
 }
 
+// #############################
+// ## Iteration 3: Split time ##
+// #############################
+
 function printSplit() {
-  // ... your code goes here
+  newSplitElement = document.createElement('li');
+  newSplitElement.innerText = chronometer.split();
+  splitsElement.appendChild(newSplitElement);
 }
 
+// ########################
+// ## Iteration 4: Reset ##
+// ########################
+
 function clearSplits() {
-  // ... your code goes here
+  splitsElement.querySelectorAll('li').forEach((n) => n.remove());
 }
 
 function setStopBtn() {
@@ -86,14 +96,13 @@ btnLeftElement.addEventListener('click', () => {
   }
 });
 
-// #############################
-// ## Iteration 3: Split time ##
-// #############################
-
+// Reset/Split Button
 btnRightElement.addEventListener('click', () => {
   if (btnRightElement.getAttribute('class') === 'btn split') {
-    newSplitElement = document.createElement('li');
-    newSplitElement.innerText = chronometer.split();
-    splitsElement.appendChild(newSplitElement);
+    printSplit();
+  } else {
+    clearSplits();
+    chronometer.reset();
+    printTime();
   }
 });
