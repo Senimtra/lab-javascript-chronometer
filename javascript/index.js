@@ -86,7 +86,14 @@ btnLeftElement.addEventListener('click', () => {
   }
 });
 
-// Reset/Split Button
+// #############################
+// ## Iteration 3: Split time ##
+// #############################
+
 btnRightElement.addEventListener('click', () => {
-  // ... your code goes here
+  if (btnRightElement.getAttribute('class') === 'btn split') {
+    newSplitElement = document.createElement('li');
+    newSplitElement.innerText = chronometer.split();
+    splitsElement.appendChild(newSplitElement);
+  }
 });
